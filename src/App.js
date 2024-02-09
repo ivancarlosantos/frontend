@@ -43,7 +43,7 @@ function App() {
         <Form onEdit={onEdit} setOnEdit={setOnEdit} getPets={getPets} />
         <Grid setOnEdit={setOnEdit} pets={pets} setPets={setPets} />
       </Container>
-      <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
+      <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_RIGHT} />
       <GlobalStyle />
     </>
   );

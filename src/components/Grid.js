@@ -53,7 +53,7 @@ const Grid = ({ pets, setPets, setOnEdit }) => {
         const newArray = pets.filter((pets) => pets.id !== id);
 
         setPets(newArray);
-        toast.success(data);
+        toast.success("Pet removido com sucesso!");
       })
       .catch(({ data }) => toast.error(data));
 

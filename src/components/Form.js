@@ -81,7 +81,7 @@ const Form = ({ getPets, onEdit, setOnEdit }) => {
           adotado: pet.adotado.value,
           data_adocao: pet.data_adocao.value,
         })
-        .then(({ data }) => toast.success(data))
+        .then(({ data }) => toast.success("Dados do Pet alterados com sucesso! "))
         .catch(({ data }) => toast.error(data));
     } else {
       await axios
@@ -93,7 +93,7 @@ const Form = ({ getPets, onEdit, setOnEdit }) => {
           adotado: pet.adotado.value,
           data_adocao: pet.data_adocao.value,
         })
-        .then(({ data }) => toast.success(data))
+        .then(({ data }) => toast.success("Pet cadastrado com sucesso! "))
         .catch(({ data }) => toast.error(data));
     }
 

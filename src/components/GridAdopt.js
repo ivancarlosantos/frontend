@@ -41,7 +41,7 @@ export const Td = styled.td`
   }
 `;
 
-const Grid = ({ pets, setPets, setOnEdit }) => {
+const GridAdopt = ({ petsAdopt, setPetsAdopt, setOnEdit }) => {
   const handleEdit = (item) => {
     setOnEdit(item);
   };
@@ -50,9 +50,9 @@ const Grid = ({ pets, setPets, setOnEdit }) => {
     await axios
       .delete("http://localhost:5000/pets/" + id)
       .then(({ data }) => {
-        const newArray = pets.filter((pets) => pets.id !== id);
+        const newArray = petsAdopt.filter((petsAdopt) => petsAdopt.id !== id);
 
-        setPets(newArray);
+        setPetsAdopt(newArray);
         toast.success("Pet removido com sucesso!");
       })
       .catch(({ data }) => toast.error(data));
@@ -75,7 +75,7 @@ const Grid = ({ pets, setPets, setOnEdit }) => {
         </Tr>
       </Thead>
       <Tbody>
-        {pets.map((item, i) => (
+        {petsAdopt.map((item, i) => (
           <Tr key={i}>
             <Td width="10%">{item.nome}</Td>
             <Td width="10%">{item.idade}</Td>
@@ -97,4 +97,4 @@ const Grid = ({ pets, setPets, setOnEdit }) => {
   
 };
 
-export default Grid;
+export default GridAdopt;
